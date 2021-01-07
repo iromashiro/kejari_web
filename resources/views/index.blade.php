@@ -298,7 +298,7 @@
 @endsection
 
 @section('footer')
-<footer class="footer" data-background-color="black">
+<!--<footer class="footer" data-background-color="black">
     <div class="contactus-2">
         <div id="contactUs2Map" class="map"></div>
         <div class="col-md-10">
@@ -376,4 +376,5 @@
         </div>
     </div>
 </footer>
+-->
 @endsection
