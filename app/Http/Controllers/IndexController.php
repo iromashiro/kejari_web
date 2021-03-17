@@ -23,7 +23,7 @@ class IndexController extends Controller
         $x = Berita::where('jenis_aktifitas', 'berita')->paginate(3);
         $y = Berita::where('jenis_aktifitas', 'kegiatan')->paginate(3);
         $a = Header::all();
-        $b = Pegawai::where('id_jabatan', 1)->first();
+        $b = Pegawai::where('id_jabatan', 2)->first();
         $d = Agenda::where('tanggal', '=', Carbon::today())->get();
 
         return \view('index', \compact('x', 'y', 'a', 'b', 'd', 'profil', 'organisasi'));
