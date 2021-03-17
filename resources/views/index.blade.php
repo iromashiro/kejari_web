@@ -103,11 +103,11 @@
 
 
             <!-- KANAN -->
-            <div class="col-md-3 ml-auto mr-auto">
+            <div class="col-md-4 ml-auto mr-auto">
                 <div class="card card-profile">
                     <div class="card-header card-header-image">
                         <a href="#pablo">
-                            <img class="img" src="{{ Storage::url($b->path) }}" width="250px" height="200px">
+                            <img class="img" src="{{ Storage::url($b->path) }}">
                             <div class="card-title">
                                 @foreach ($b->jabatan as $bj)
                                 {{ $bj->nama_jabatan }}
