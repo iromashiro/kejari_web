@@ -103,7 +103,7 @@
 
 
             <!-- KANAN -->
-            <div class="col-md-4 ml-auto mr-auto">
+            <div class="col-md-3 ml-auto mr-auto">
                 <div class="card card-profile">
                     <div class="card-header card-header-image">
                         <a href="#pablo">
