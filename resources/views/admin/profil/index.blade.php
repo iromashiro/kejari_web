@@ -71,7 +71,7 @@
                     <tr>
                         <td class="text-center">{{ $loop->index +1 }}</td>
                         <td>{{ $y->name }}</td>
-                        <td>{{ str_limit($y->isi, 10) }}</td>
+                        <td>{{ Str::words($y->isi, 10) }}</td>
                         <td class="td-actions text-right">
                             <a href="{{ route('form-edit.profil', $y->id) }}" type="button" rel="tooltip"
                                 class="btn btn-info btn-just-icon btn-sm">
