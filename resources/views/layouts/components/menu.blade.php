@@ -24,24 +24,11 @@
                         <i class="material-icons">account_circle</i> Profil
                     </a>
                     <div class="dropdown-menu dropdown-with-icons">
-                        <a href="./presentation.html" class="dropdown-item">
-                            <i class="material-icons">find_in_page</i> Sejarah
+                        @foreach ($profil as $p)
+                        <a href="{{ route('profil', $p->name) }}" class="dropdown-item">
+                            <i class="material-icons">find_in_page</i> {{ $p->name }}
                         </a>
-                        <a href="./presentation.html" class="dropdown-item">
-                            <i class="material-icons">help_outline</i> Logo & Makna
-                        </a>
-                        <a href="./presentation.html" class="dropdown-item">
-                            <i class="material-icons">gavel</i> Struktur Organisasi
-                        </a>
-                        <a href="./presentation.html" class="dropdown-item">
-                            <i class="material-icons">vertical_split</i> Visi dan Misi
-                        </a>
-                        <a href="./presentation.html" class="dropdown-item">
-                            <i class="material-icons">touch_app</i> Perintah Harian
-                        </a>
-                        <a href="./presentation.html" class="dropdown-item">
-                            <i class="material-icons">perm_identity</i> Pegawai
-                        </a>
+                        @endforeach
                     </div>
                 </li>
                 <li class="dropdown nav-item">
@@ -49,28 +36,15 @@
                         <i class="material-icons">supervisor_account</i> Organisasi
                     </a>
                     <div class="dropdown-menu dropdown-with-icons">
-                        <a href="./presentation.html" class="dropdown-item">
-                            <i class="material-icons">chrome_reader_mode</i> Pidana Umum
+                        @foreach ($organisasi as $os)
+                        <a href="{{ route('organisasi', $os->name) }}" class="dropdown-item">
+                            <i class="material-icons">chrome_reader_mode</i> {{ $os->name }}
                         </a>
-                        <a href="./presentation.html" class="dropdown-item">
-                            <i class="material-icons">class</i> Pidana Khusus
-                        </a>
-                        <a href="./presentation.html" class="dropdown-item">
-                            <i class="material-icons">contactless</i> Pembinaan
-                        </a>
-                        <a href="./presentation.html" class="dropdown-item">
-                            <i class="material-icons">settings_input_antenna</i> Intelijen
-                        </a>
-                        <a href="./presentation.html" class="dropdown-item">
-                            <i class="material-icons">tab</i> Perdata dan Tata Usaha
-                        </a>
-                        <a href="./presentation.html" class="dropdown-item">
-                            <i class="material-icons">subject</i> Pemeriksa
-                        </a>
+                        @endforeach
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="#pablo" class="nav-link">
+                    <a href="{{ route('index.hukum') }}" class="nav-link">
                         <i class="material-icons">menus</i>
                         Produk Hukum
                     </a>

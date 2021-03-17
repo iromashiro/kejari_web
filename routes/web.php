@@ -21,22 +21,8 @@ Route::get('/index/aktifitas', 'IndexController@index_berita')->name('index.akti
 
 //////////////////////      PROFIL     //////////////////
 Route::get('/profil/{name}', 'IndexController@profil')->name('profil');
-
-Route::get('/pegawai', function () {
-    return view('spesifik_pegawai');
-});
-
-Route::get('/pegawai/index', function () {
-    return view('index_pegawai');
-});
-
-Route::get('/organisasi', function () {
-    return view('organisasi');
-});
-
-Route::get('/peraturan', function () {
-    return view('index_peraturan');
-});
+Route::get('/organisasi/{name}', 'IndexController@organisasi')->name('organisasi');
+Route::get('/produk-hukum', 'IndexController@index_hukum')->name('index.hukum');
 
 //////////////////////////////////////     ADMIN   //////////////////////////////////////
 

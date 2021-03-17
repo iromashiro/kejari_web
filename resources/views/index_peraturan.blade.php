@@ -1,138 +1,55 @@
 @extends('layouts.app')
+@section('header')
+<div id="carouselExampleIndicators" class="page-header carousel slide" data-ride="carousel" data-interval="10000">
+    <div class="carousel-inner">
+
+        @foreach ($a as $av)
+        @if($loop->index == 0)
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="{{asset($av->path)}}" alt="First slide">
+        </div>
+        @else
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{{asset($av->path)}}">
+        </div>
+        @endif
+        @endforeach
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <i class="material-icons">keyboard_arrow_left</i>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <i class="material-icons">keyboard_arrow_right</i>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+@endsection
 @section('konten')
 <div class="container">
     <div class="card card-plain">
         <div class="card-body">
-            <h3 class="card-title">Shopping Cart</h3>
+            <h3 class="card-title">Produk Hukum</h3>
             <br />
             <div class="table-responsive">
                 <table class="table table-shopping">
                     <thead>
                         <tr>
-                            <th class="text-center"></th>
-                            <th>Product</th>
-                            <th class="th-description">Color</th>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th class="th-description">Download</th>
                             <th class="th-description">Size</th>
-                            <th class="text-right">Price</th>
-                            <th class="text-right">Qty</th>
-                            <th class="text-right">Amount</th>
                         </tr>
                     </thead>`
                     <tbody>
+                        @foreach ($x as $xy)
                         <tr>
-                            <td>
-                                <div class="img-container">
-                                    <img src="../assets/img/product1.jpg" alt="...">
-                                </div>
-                            </td>
-                            <td class="td-name">
-                                <a href="#jacket">Spring Jacket</a>
-                                <br />
-                                <small>by Dolce&Gabbana</small>
-                            </td>
-                            <td>
-                                Red
-                            </td>
-                            <td>
-                                M
-                            </td>
-                            <td class="td-number text-right">
-                                <small>&euro;</small>549
-                            </td>
-                            <td class="td-number">
-                                1
-                                <div class="btn-group btn-group-sm">
-                                    <button class="btn btn-round btn-info"> <i class="material-icons">remove</i>
-                                    </button>
-                                    <button class="btn btn-round btn-info"> <i class="material-icons">add</i> </button>
-                                </div>
-                            </td>
-                            <td class="td-number">
-                                <small>&euro;</small>549
-                            </td>
-                            <td class="td-actions">
-                                <button type="button" rel="tooltip" data-placement="left" title="Remove item"
-                                    class="btn btn-link">
-                                    <i class="material-icons">close</i>
-                                </button>
-                            </td>
+                            <td>{{ $loop->index +1 }}</td>
+                            <td>{{ $xy->nama_produk }}</td>
+                            <td><a href="{{ Storage::URL($xy->path) }}">download</a></td>
+                            <td></td>
                         </tr>
-                        <tr>
-                            <td>
-                                <div class="img-container">
-                                    <img src="../assets/img/product2.jpg" alt="..." />
-                                </div>
-                            </td>
-                            <td class="td-name">
-                                <a href="#pants">Short Pants</a>
-                                <br />
-                                <small>by Pucci</small>
-                            </td>
-                            <td>
-                                Purple
-                            </td>
-                            <td>
-                                M
-                            </td>
-                            <td class="td-number">
-                                <small>&euro;</small>499
-                            </td>
-                            <td class="td-number">
-                                2
-                                <div class="btn-group btn-group-sm">
-                                    <button class="btn btn-round btn-info"> <i class="material-icons">remove</i>
-                                    </button>
-                                    <button class="btn btn-round btn-info"> <i class="material-icons">add</i> </button>
-                                </div>
-                            </td>
-                            <td class="td-number">
-                                <small>&euro;</small>998
-                            </td>
-                            <td class="td-actions">
-                                <button type="button" rel="tooltip" data-placement="left" title="Remove item"
-                                    class="btn btn-link">
-                                    <i class="material-icons">close</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="img-container">
-                                    <img src="../assets/img/product3.jpg" alt="...">
-                                </div>
-                            </td>
-                            <td class="td-name">
-                                <a href="#nothing">Pencil Skirt</a>
-                                <br />
-                                <small>by Valentino</small>
-                            </td>
-                            <td>
-                                White
-                            </td>
-                            <td>
-                                XL
-                            </td>
-                            <td class="td-number">
-                                <small>&euro;</small>799
-                            </td>
-                            <td class="td-number">
-                                1
-                                <div class="btn-group btn-group-sm">
-                                    <button class="btn btn-round btn-info"> <i class="material-icons">remove</i>
-                                    </button>
-                                    <button class="btn btn-round btn-info"> <i class="material-icons">add</i> </button>
-                                </div>
-                            </td>
-                            <td class="td-number">
-                                <small>&euro;</small>799
-                            </td>
-                            <td class="td-actions">
-                                <button type="button" rel="tooltip" data-placement="left" title="Remove item"
-                                    class="btn btn-link">
-                                    <i class="material-icons">close</i>
-                                </button>
-                            </td>
-                        </tr>
+                        @endforeach
                         <!-- <tr>
               <td colspan="6"></td>
               <td colspan="2" class="text-right">

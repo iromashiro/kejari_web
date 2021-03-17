@@ -244,7 +244,6 @@
 
             </div>
             <!-- Batas KANAN -->
-
         </div>
         <!-- Batas Konten disini -->
 
@@ -280,7 +279,6 @@
                             </div>
                         </div>
                         @endforeach
-
                     </div>
                 </div>
             </div>
