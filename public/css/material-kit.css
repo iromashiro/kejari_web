@@ -19670,7 +19670,7 @@ thead.thead-inverse th,
 }
 
 .card .card-header.card-header-image img {
-    width: 250px;
+    width: 150px;
     border-radius: 6px;
     pointer-events: none;
     box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);

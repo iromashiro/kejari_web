@@ -107,7 +107,7 @@
                 <div class="card card-profile">
                     <div class="card-header card-header-image">
                         <a href="#pablo">
-                            <img class="img" src="{{ Storage::url($b->path) }}">
+                            <img class="img" src="{{ Storage::url($b->path) }}" height="200px">
                             <div class="card-title">
                                 @foreach ($b->jabatan as $bj)
                                 {{ $bj->nama_jabatan }}
